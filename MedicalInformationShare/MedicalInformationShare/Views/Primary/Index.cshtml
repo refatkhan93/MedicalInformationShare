@@ -1,0 +1,115 @@
+﻿@using MedicalInformationShare.Models
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="row scrchk">
+    <div class="col-md-3">
+        <div class="left-side">
+            <h5 style="margin-top: 10px;"><i class="fas fa-search icnmar"></i>Search Inventory</h5>
+            <div class="list-group ovrchk">
+                <a class="list-gp" href="@Url.Action("SearchInventory", "Primary", new {id = 1})">Blood Bank</a>
+                <a class="list-gp" href="@Url.Action("SearchInventory", "Primary", new {id = 2})">Medicine</a>
+                <a class="list-gp" href="@Url.Action("SearchInventory", "Primary", new {id = 3})">OT instrument</a>
+                <a class="list-gp" href="@Url.Action("SearchInventory", "Primary", new {id = 4})">Emergency instruemnt</a>
+                <a class="list-gp" href="@Url.Action("SearchInventory", "Primary", new {id = 5})">Available bed</a>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-md-6">
+        <div class="left-side">
+            <h5 style="margin-top: 10px;"><i class="fas fa-hand-holding-water icnmar"></i>Blood Bank</h5>
+            <div class="dvtable">
+                <table class="table table-bordered table-striped table-hover" id="bloodbank" style="width: 31em;">
+                    <thead>
+                    <tr>
+                        <th>Serial No</th>
+                        <th>Blood Group</th>
+                        <th>AvailableBag</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    @{
+                        int ii = 1;
+                        foreach (Blood b in ViewBag.Blood)
+                        {
+                            <tr>
+                                <td>@ii</td>
+                                <td>@b.BloodGroup</td>
+                                <td>@b.AvailableBag</td>
+                            </tr>
+                            ii++;
+                        }
+
+                    }
+                    </tbody>
+
+                </table>
+            </div>
+
+            <hr/>
+            <h5 style="margin-top: 10px;"><i class="fas fa-capsules icnmar"></i>Medicine Store</h5>
+            <div class="dvtable">
+                <table class="table table-bordered table-striped table-hover" id="medicine" style="width: 31em;">
+                    <thead>
+                    <tr>
+                        <th>Serial No</th>
+                        <th>Name</th>
+                        <th>Power</th>
+                        <th>Company</th>
+
+                    </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    @{
+                        int i = 1;
+                        foreach (Medicine m in ViewBag.Medicine)
+                        {
+                            <tr>
+                                <td>@i</td>
+                                <td>@m.Name</td>
+                                <td>@m.Measurement</td>
+                                <td>@m.Company</td>
+                            </tr>
+                            i++;
+                        }
+
+                    }
+                    </tbody>
+
+                </table>
+            </div>
+            <hr/>
+            </div>
+        </div>
+    <div class="col-md-3">
+        <div class="left-side">
+            <h5 style="margin-top: 10px;"><i class="fas fa-dolly-flatbed icnmar"></i>Add Inventory</h5>
+            <div class="list-group ovrchk">
+                <a class="list-gp" href="@Url.Action("Blood","Blood")">Blood Bank</a>
+                <a class="list-gp" href="@Url.Action("MedicineIndex", "Medicine")">Medicine</a>
+                <a class="list-gp" href="@Url.Action("SearchInventory", "Primary", new {id = 3})">OT instrument</a>
+                <a class="list-gp" href="@Url.Action("SearchInventory", "Primary", new {id = 4})">Emergency instruemnt</a>
+                <a class="list-gp" href="@Url.Action("SearchInventory", "Primary", new {id = 5})">Available bed</a>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/aos.js"></script>
+
+    <script>
+        AOS.init();
+        $(document).ready(function () {
+            $('#bloodbank').DataTable();
+            $('#medicine').DataTable();
+
+        });
+
+    </script>
+
+}

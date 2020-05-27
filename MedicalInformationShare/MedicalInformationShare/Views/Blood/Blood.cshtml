@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MedicalInformationShare.Models.Blood>
+
+@{
+    ViewBag.Title = "Blood";
+}
+<div class="center-side">
+    <p class="top-para">
+        @Html.ActionLink("Create New", "Create", "Blood", null, new {@class = "btn btn-primary createbtn"})
+    </p>
+    <div style="padding: 20px;">
+        <table class="table table-bordered table-striped table-hover" id="blood">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BloodGroup)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AvailableBag)
+                    </th>
+                    
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BloodGroup)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AvailableBag)
+                        </td>
+
+                        <td>
+                           
+                            @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
+                            <a href="~/Blood/Delete/@item.Id" onclick="return confirm('Are you sure you want to Delete?');">Delete</a>
+                            @*@Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section scripts{
+    
+    <script>
+
+    $(document).ready(function () {
+        $('#blood').DataTable();
+
+    });
+
+</script>
+
+}
