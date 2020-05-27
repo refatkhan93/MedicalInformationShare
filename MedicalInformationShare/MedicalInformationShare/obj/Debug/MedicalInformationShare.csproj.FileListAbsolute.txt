@@ -50,6 +50,6 @@ E:\7th_Sem_Projects\Ismail\MedicalInformationShare\MedicalInformationShare\bin\M
 E:\7th_Sem_Projects\Ismail\MedicalInformationShare\MedicalInformationShare\bin\Microsoft.Owin.Security.Google.xml
 E:\7th_Sem_Projects\Ismail\MedicalInformationShare\MedicalInformationShare\bin\Microsoft.Owin.Security.Twitter.xml
 E:\7th_Sem_Projects\Ismail\MedicalInformationShare\MedicalInformationShare\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\7th_Sem_Projects\Ismail\MedicalInformationShare\MedicalInformationShare\obj\Debug\MedicalInformationShare.csprojResolveAssemblyReference.cache
 E:\7th_Sem_Projects\Ismail\MedicalInformationShare\MedicalInformationShare\obj\Debug\MedicalInformationShare.dll
 E:\7th_Sem_Projects\Ismail\MedicalInformationShare\MedicalInformationShare\obj\Debug\MedicalInformationShare.pdb
-E:\7th_Sem_Projects\Ismail\MedicalInformationShare\MedicalInformationShare\obj\Debug\MedicalInformationShare.csprojResolveAssemblyReference.cache
