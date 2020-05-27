@@ -80,6 +80,7 @@ namespace MedicalInformationShare.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include="Id,BloodGroup,AvailableBag")] Blood blood)
         {
+            
             blood.HospitalId = HospitalId;
             if (ModelState.IsValid)
             {
