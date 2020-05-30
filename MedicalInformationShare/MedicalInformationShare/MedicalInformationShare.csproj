@@ -165,6 +165,7 @@
     <Compile Include="Controllers\BloodController.cs" />
     <Compile Include="Controllers\MedicineController.cs" />
     <Compile Include="Controllers\PrimaryController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -172,6 +173,7 @@
     <Compile Include="Models\Blood.cs" />
     <Compile Include="Models\GasInventory.cs" />
     <Compile Include="Models\Hospital.cs" />
+    <Compile Include="Models\HospitalElementView.cs" />
     <Compile Include="Models\Medicine.cs" />
     <Compile Include="Models\OTInstrument.cs" />
     <Compile Include="Models\WardInfo.cs" />
@@ -450,6 +452,7 @@
     <Content Include="Content\DataTables\css\common.scss" />
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\semanticui.scss" />
+    <Content Include="fonts\Neon.ttf" />
     <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.js" />
     <Content Include="Scripts\DataTables\autoFill.bootstrap.min.js" />
@@ -689,6 +692,8 @@
     <Content Include="Views\Medicine\Edit.cshtml" />
     <Content Include="Views\Medicine\MedicineIndex.cshtml" />
     <Content Include="Views\Authentication\Login.cshtml" />
+    <Content Include="Views\Search\SearchBlood.cshtml" />
+    <Content Include="Views\Search\SearchMedicine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

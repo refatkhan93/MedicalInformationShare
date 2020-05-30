@@ -1,9 +1,14 @@
-﻿.topbar {
-    background-color: #73d8d6;
-    padding: 16px;
+﻿@font-face { font-family: Neon; src: url('../fonts/Neon.ttf'); } 
+
+
+.topbar {
+    background-color: #d99ce6d4;
+    padding: 15px;
     padding-left: 129px;
-    font-size: 29px;
-    font-family: cursive;
+    font-size: 35px;
+    font-family: Neon;
+    font-weight: bolder;
+    text-shadow: 3px 4px 5px #5d1e5b;
 }
 .d-block {
     height: 30em;
@@ -119,4 +124,13 @@
     color: red;
     
     font-style: oblique;
+}
+.search-head {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 40px;
+    font-family: Neon;
+    color: #3b4440;
+    font-weight: bolder;
+    text-shadow: 3px 3px 3px #030d25;
 }

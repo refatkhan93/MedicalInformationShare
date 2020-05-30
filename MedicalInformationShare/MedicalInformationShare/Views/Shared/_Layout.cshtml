@@ -18,7 +18,7 @@
 <body>
 <div class="topbar">
     <span class="fas fa-clinic-medical animated bounceInLeft"></span>
-    <a class="title" href="~/Primary/Index">MedicInfo</a>
+    <a class="title" href="~/Primary/Index">Medic Info</a>
 
 </div>
    
@@ -178,13 +178,15 @@
 
 
     
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/bootstrap")
-    <script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
-@RenderSection("scripts", required: false)
+
     
 
 </body>
 </html>@*
 <script src="~/Scripts/fontawesome/fontawesome.js"></script>*@
 <script src="~/Scripts/fontawesome/all.min.js"></script>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+<script src="~/Scripts/aos.js"></script>
+<script src="~/Scripts/DataTables/jquery.dataTables.min.js"></script>
+@RenderSection("scripts", required: false)

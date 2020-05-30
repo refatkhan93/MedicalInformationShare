@@ -1,0 +1,66 @@
+﻿@using MedicalInformationShare.Models
+
+@{
+    ViewBag.Title = "SearchBlood";
+}
+<div class="row scrchk">
+    <div class="col-md-12">
+        <div class="left-side">
+            <h5 class="search-head"><i class="fas fa-hand-holding-water icnmar"></i>Blood Bank</h5>
+            <div class="dvtable">
+                <table class="table table-bordered table-striped table-hover" id="bloodbank" style="width: 31em;">
+                    <thead>
+                        <tr>
+                            <th>Serial No</th>
+                            <th>Blood Group</th>
+                            <th>Available Bag</th>
+                            <th>Hospital</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        @{
+                            int ii = 1;
+                            foreach (HospitalElementView h in Model)
+                            {
+                                <tr>
+                                    <td>@ii</td>
+                                    <td>@h.Blood.BloodGroup</td>
+                                    <td>@h.Blood.AvailableBag</td>
+                                    <td>@h.Hospital.Name</td>
+                                    <td>@h.Hospital.Address</td>
+                                    <td>@h.Hospital.Phone</td>
+                                    <td>@h.Hospital.Email</td>
+                                    
+                                </tr>
+                                ii++;
+                            }
+
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+
+            <a class="btn btn-success" style="width: 98%; margin: 12px;" href="~/Primary/Index">GO BACK</a>
+        </div>
+    </div>
+    
+</div>
+@section scripts{
+    
+
+    <script>
+        AOS.init();
+        $(document).ready(function () {
+            $('#bloodbank').DataTable();
+            
+
+        });
+
+    </script>
+
+}
