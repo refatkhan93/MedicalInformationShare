@@ -10,6 +10,7 @@
         <div class="left-side">
             <h5 style="margin-top: 10px;"><i class="fas fa-search icnmar"></i>Search Inventory</h5>
             <div class="list-group ovrchk">
+                <a class="list-gp" href="@Url.Action("SearchDoctor", "Search")">Doctor</a>
                 <a class="list-gp" href="@Url.Action("SearchBlood", "Search")">Blood Bank</a>
                 <a class="list-gp" href="@Url.Action("SearchMedicine", "Search")">Medicine</a>
                 <a class="list-gp" href="@Url.Action("SearchInventory", "Search")">OT instrument</a>
@@ -87,9 +88,10 @@
         </div>
     <div class="col-md-3">
         <div class="left-side">
-            <h5 style="margin-top: 10px;"><i class="fas fa-dolly-flatbed icnmar"></i>Add Inventory</h5>
+            <h5 style="margin-top: 10px;"><i class="fas fa-dolly-flatbed icnmar"></i>Add Assets</h5>
             <div class="list-group ovrchk">
-                <a class="list-gp" href="@Url.Action("Blood","Blood")">Blood Bank</a>
+                <a class="list-gp" href="@Url.Action("Doctor", "Doctor")">Doctor</a>
+                <a class="list-gp" href="@Url.Action("Blood", "Blood")">Blood Bank</a>
                 <a class="list-gp" href="@Url.Action("MedicineIndex", "Medicine")">Medicine</a>
                 <a class="list-gp" href="@Url.Action("SearchInventory", "Primary", new {id = 3})">OT instrument</a>
                 <a class="list-gp" href="@Url.Action("SearchInventory", "Primary", new {id = 4})">Emergency instruemnt</a>

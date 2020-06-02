@@ -10,5 +10,6 @@ namespace MedicalInformationShare.Models
         public Blood Blood = new Blood();
         public Hospital Hospital = new Hospital();
         public Medicine Medicine =new Medicine();
+        public Doctor Doctor = new Doctor();
     }
 }

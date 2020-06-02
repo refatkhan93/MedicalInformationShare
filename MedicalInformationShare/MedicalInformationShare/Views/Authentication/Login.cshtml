@@ -3,37 +3,36 @@
     ViewBag.Title = "Login";
 }
 
-<!DOCTYPE html>
-
-
+<link href="~/Content/Login.css" rel="stylesheet" />
 <div class="login">
     <p class="lbl-login">
         Login
     </p>
     @if (ViewBag.Error == "Error")
     {
-        <p class="error" id="error">Login Failed: Check your login.</p>
+        <p class="cerror" id="error">Login Failed: Check your login.</p>
     }
     
-        <hr />
+      
     
-    <form style="padding: 2em 5em 5em;" action="~/Authentication/LoginUser" method="POST">
+    <form style="padding: 2em 5em 5em; margin-left: 1em;" action="~/Authentication/LoginUser" method="POST">
         <table>
             <tr>
-                <td><label for="username">Email </label></td>
+                <td></td>
                 <td>
-                    <input class="form-control" type="text" name="username" id="username" placeholder="Enter User Name" required/>
-                </td>
-            </tr>
-            <tr>
-                <td><label for="password">Password </label></td>
-                <td>
-                    <input class="form-control" type="password" name="password" id="password" placeholder="Enter password" required/>
+                    <input class="user-name" type="text" name="username" id="username" placeholder="Username" required/>
                 </td>
             </tr>
             <tr>
                 <td></td>
-                <td><input class="btn btn-success" style="width: 100%; margin: 10px 0;" type="submit" value="Login" /></td>
+                @*<td><label for="password">Password </label></td>*@
+                <td>
+                    <input class="user-name" type="password" name="password" id="password" placeholder="Password" required/>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input class="btn animate-btn" style="width: 100%; margin: 10px 0;" type="submit" value="Login" /></td>
             </tr>
             <tr>
                 <td></td>

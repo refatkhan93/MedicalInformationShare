@@ -15,6 +15,9 @@ namespace MedicalInformationShare.Context
         public DbSet<OTInstrument> OtInstruments { get; set; }
         public DbSet<WardInfo> WardInfos { get; set; }
         public DbSet<Hospital> Hospitals { get; set; }
+        
+
+        public System.Data.Entity.DbSet<MedicalInformationShare.Models.Doctor> Doctors { get; set; }
 
 
     }

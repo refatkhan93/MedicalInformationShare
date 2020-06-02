@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -17,9 +18,75 @@
 </head>
 <body>
 <div class="topbar">
-    <span class="fas fa-clinic-medical animated bounceInLeft"></span>
-    <a class="title" href="~/Primary/Index">Medic Info</a>
 
+               
+    <nav class="navbar navbar-expand-sm  justify-content-end">
+        @*<a class="navbar-brand" href="#">Home</a>*@
+        
+        <a class="title navbar-brand textlogo" href="~/Primary/Index"><span class="fas fa-clinic-medical animated bounceInLeft icn"></span>Medic Info</a>
+        
+
+        @*<button class="btn btn-success ml-auto mr-1">Always Show</button>*@
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0 ml-auto mr-1" id="navbarSupportedContent">
+            <ul class="navbar-nav text-right">
+               @if (Session["HospitalId"] == null)
+               {
+                   <li class="nav-item active">
+                       <a class="btn nav-btn" href="~/Authentication/Login"><i class="fas fa-sign-in-alt icn"></i>Login</a>
+                   </li>
+                   <li class="nav-item active">
+                       <a class="btn nav-btn" href="~/Authentication/Registration"><i class="fas fa-user-plus icn"></i>Register</a>
+                   </li>
+               }
+               else
+               {
+                   <li class="nav-item active">
+                       <a class="btn nav-btn" href="~/Primary/Index"><i class="fas fa-home icn"></i>Home</a>
+                   </li>
+                   <li>
+                       <div class="btn-group">
+                           <a href="#" class="btn nav-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <i class="fas fa-dolly-flatbed icn"></i>Assets
+                           </a>
+                           <div class="dropdown-menu">
+                               <a class="dropdown-item" href="@Url.Action("Doctor", "Doctor")">Doctor</a>
+                               <a class="dropdown-item" href="@Url.Action("Blood", "Blood")">Blood Bank</a>
+                               <a class="dropdown-item" href="@Url.Action("MedicineIndex", "Medicine")">Medicine</a>
+                               <div class="dropdown-divider"></div>
+                               <a class="dropdown-item" href="#">Separated link</a>
+                           </div>
+                       </div>
+                   </li>
+                   <li>
+                       <div class="btn-group">
+                           <a href="#" class="btn nav-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <i class="fas fa-search icn"></i>Search
+                           </a>
+                           <div class="dropdown-menu">
+                               <a class="dropdown-item" href="@Url.Action("SearchDoctor", "Search")">Doctor</a>
+                               <a class="dropdown-item" href="@Url.Action("SearchBlood", "Search")">Blood Bank</a>
+                               <a class="dropdown-item" href="@Url.Action("SearchMedicine", "Search")">Medicine</a>
+                               <div class="dropdown-divider"></div>
+                               <a class="dropdown-item" href="#">Separated link</a>
+                           </div>
+                       </div>
+                   </li>
+                   <li class="nav-item active">
+                       <a class="btn nav-btn" href="~/Primary/Index"><i class="fas fa-exclamation-circle icn"></i>About Us</a>
+                   </li>
+                   <li class="nav-item active">
+                       <a class="btn nav-btn" href="~/Primary/Index"><i class="fas fa-sign-in-alt icn"></i>Logout</a>
+                   </li>
+               }
+
+            </ul>
+        </div>
+    </nav>
+            
+        
 </div>
    
 <div class="container body-content">

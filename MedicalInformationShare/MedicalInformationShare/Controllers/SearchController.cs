@@ -80,6 +80,39 @@ namespace MedicalInformationShare.Controllers
             return View(hospitalElementViews);
 
         }
+
+        public ActionResult SearchDoctor()
+        {
+            var data = from m in db.Doctors
+                       join h in db.Hospitals on m.HospitalId equals h.Id
+                       select new
+                       {
+                           mId = m.Id,
+                           mName = m.Name,
+                           mDesignation = m.Designation,
+                           mImage = m.Image,
+                           hName = h.Name,
+                           hAddress = h.Address,
+                           hPhone = h.Phone,
+                           hEmail = h.Email
+                       };
+            List<HospitalElementView> hospitalElementViews = new List<HospitalElementView>();
+            foreach (var d in data)
+            {
+                HospitalElementView h = new HospitalElementView();
+                h.Doctor.Id = d.mId;
+                h.Doctor.Name = d.mName;
+                h.Doctor.Designation = d.mDesignation;
+                h.Doctor.Image = d.mImage;
+                h.Hospital.Name = d.hName;
+                h.Hospital.Address = d.hAddress;
+                h.Hospital.Phone = d.hPhone;
+                h.Hospital.Email = d.hEmail;
+                hospitalElementViews.Add(h);
+            }
+
+            return View(hospitalElementViews);
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)

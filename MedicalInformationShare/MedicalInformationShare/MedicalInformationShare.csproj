@@ -163,6 +163,7 @@
     <Compile Include="Context\MedicalContext.cs" />
     <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\BloodController.cs" />
+    <Compile Include="Controllers\DoctorController.cs" />
     <Compile Include="Controllers\MedicineController.cs" />
     <Compile Include="Controllers\PrimaryController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
@@ -171,6 +172,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Blood.cs" />
+    <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\GasInventory.cs" />
     <Compile Include="Models\Hospital.cs" />
     <Compile Include="Models\HospitalElementView.cs" />
@@ -365,6 +367,7 @@
     <Content Include="Content\fontawesome.css" />
     <Content Include="Content\fontawesome.min.css" />
     <Content Include="Content\jquery-clockpicker.css" />
+    <Content Include="Content\Login.css" />
     <Content Include="Content\regular.css" />
     <Content Include="Content\regular.min.css" />
     <Content Include="Content\medical.css" />
@@ -420,6 +423,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Photos\blog-wp-login.png" />
+    <Content Include="Photos\register.jpg" />
+    <Content Include="Scripts\anime.min.js" />
     <Content Include="Scripts\aos.js" />
     <Content Include="Scripts\bootstrap-clockpicker.min.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
@@ -694,11 +700,15 @@
     <Content Include="Views\Authentication\Login.cshtml" />
     <Content Include="Views\Search\SearchBlood.cshtml" />
     <Content Include="Views\Search\SearchMedicine.cshtml" />
+    <Content Include="Views\Authentication\Register.cshtml" />
+    <Content Include="Views\Doctor\Create.cshtml" />
+    <Content Include="Views\Doctor\Edit.cshtml" />
+    <Content Include="Views\Doctor\Doctor.cshtml" />
+    <Content Include="Views\Search\SearchDoctor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\CustomDesign\" />
-    <Folder Include="Photos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

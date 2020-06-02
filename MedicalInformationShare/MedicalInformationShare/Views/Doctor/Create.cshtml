@@ -1,0 +1,49 @@
+﻿@model MedicalInformationShare.Models.Doctor
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="center-side" style="padding: 20px; text-align: center;">
+    <h2>Insert New Doctor Info</h2>
+    <hr />
+    @using (Html.BeginForm("Create", "Doctor", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            
+            @Html.ValidationSummary(true)
+            <table style="margin: 45px auto;">
+                <tr>
+                    <td>@Html.LabelFor(model => model.Name, new { @class = "control-label" })</td>
+                    <td>
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.Designation, new { @class = "control-label" })</td>
+                    <td>
+                        @Html.TextBoxFor(model => model.Designation, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Designation)
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.Image, new { @class = "control-label" })</td>
+                    <td>
+                        <input type="file" name="Image" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input style="margin: 30px 0 10px 0;" type="submit" value="Save" class="btn btn-success createbtn" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>@Html.ActionLink("Back to List", "Doctor", "Doctor", null, new { @class = "btn btn-primary createbtn" })</td>
+                </tr>
+            </table>
+        </div>
+    }
+</div>

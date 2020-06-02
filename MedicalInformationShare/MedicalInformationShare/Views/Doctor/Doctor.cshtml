@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MedicalInformationShare.Models.Doctor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="center-side">
+    <p class="top-para">
+        @Html.ActionLink("Create New", "Create", "Doctor", null, new {@class = "btn btn-primary createbtn"})
+    </p>
+<div style="padding: 20px;">
+    <table class="table table-bordered table-striped table-hover" id="doctor">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Designation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Image)
+                </th>
+                
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Designation)
+                    </td>
+                    <td>
+                        <img style="height: 6em; width: 6em;" src="~/@Html.DisplayFor(modelItem => item.Image)" />
+                    </td>
+                    
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        <a href="~/Doctor/Delete/@item.Id" onclick="return confirm('Are you sure you want to Delete?');">Delete</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+</div>
+@section scripts{
+
+    <script>
+
+        $(document).ready(function () {
+            $('#doctor').DataTable();
+
+        });
+
+    </script>
+}

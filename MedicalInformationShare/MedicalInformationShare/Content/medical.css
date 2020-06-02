@@ -1,9 +1,19 @@
 ﻿@font-face { font-family: Neon; src: url('../fonts/Neon.ttf'); } 
 
-
+.nav-btn {
+    box-shadow: -3px 0px 0px darkblue;
+    padding: 10px;
+    width: 8em;
+}
+.icn {
+    margin-right: 5px;
+}
 .topbar {
     background-color: #d99ce6d4;
-    padding: 15px;
+    padding: 3px;
+    
+}
+.textlogo {
     padding-left: 129px;
     font-size: 35px;
     font-family: Neon;
@@ -99,7 +109,7 @@
     text-align: center;
     margin: 15px;
 }
-.center-side {
+.center-side { 
     padding: 5px 1px 5px 1px;
     box-shadow: #d0cdd4 0px 0 6px 1px;
     border-radius: 0px 20px 0 20px;
@@ -108,9 +118,23 @@
 }
 
 .login {
-    margin: 10% 29%;
-    
-    background-color: #f2ebfb;
+    background-image: url('../Photos/blog-wp-login.png');
+    background-position-x: 5em;
+    background-position-y: 5em;
+    background-size: 53em;
+    background-repeat: no-repeat;
+    margin: 10% 18%;
+    box-shadow: 6px 6px 10px 2px #dcb6ff;
+    border-radius: 20px;
+}
+.register {
+    background-image: url('../Photos/register.jpg');
+    background-position-x: 25em;
+    background-position-y: 6em;
+    background-size: 24em;
+    background-repeat: no-repeat;
+    margin: 10% 15%;
+    box-shadow: 6px 6px 10px 2px #dcb6ff;
     border-radius: 20px;
 }
 .lbl-login {
@@ -119,12 +143,16 @@
     font-size: 25px;
     font-family: cursive;
 }
-.error {
-    text-align: center;
+.cerror {
     color: red;
-    
     font-style: oblique;
+    margin-left: 6em;
+    text-shadow: 1px 1px 1px black;
+    
 }
+.error {
+        color: red;
+    }
 .search-head {
     margin-top: 10px;
     text-align: center;
@@ -133,4 +161,37 @@
     color: #3b4440;
     font-weight: bolder;
     text-shadow: 3px 3px 3px #030d25;
+}
+.user-name {
+    width: 13em;
+    height: 39px;
+    align-content: center;
+    padding: 10px;
+    /*box-shadow: 0px 2px 0px 0px blue;*/
+    border-style: none;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+
+.user-name:hover  {
+    outline: none;
+    width: 13em;
+    height: 39px;
+    align-content: center;
+    padding: 10px;
+    box-shadow: 0px 3px 0px 0px #bd0cb3;
+    border-style: none;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+.user-name:focus  {
+    outline: none;
+    width: 13em;
+    height: 39px;
+    align-content: center;
+    padding: 10px;
+    box-shadow: 0px 3px 0px 0px blue;
+    border-style: none;
+    border-radius: 5px;
+    margin-bottom: 6px;
 }
